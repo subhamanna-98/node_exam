@@ -19,7 +19,7 @@ class StudentController {
              if(result){
                 return res.status(201).json({
                     success:true,
-                    message:"Student created successfully",
+                    message:"product created successfully",
                     data:result
                 })
             }
@@ -36,7 +36,7 @@ class StudentController {
             const data=await Student.find()
              return res.status(200).json({
                     success:true,
-                    message:"Student get successfully",
+                    message:"product get successfully",
                     total:data.length,
                     data:data
                 })   
@@ -56,7 +56,7 @@ class StudentController {
             const data = await Student.findById(id)
              return res.status(200).json({
                     success:true,
-                    message:"Student get successfully",
+                    message:"product get successfully",
                     data:data
                 })
 
@@ -74,7 +74,7 @@ class StudentController {
             const data=await Student.findByIdAndUpdate(id,req.body,{new:true})
             return res.status(200).json({
                 success:true,
-                message:"Student updated successfully",
+                message:"product updated successfully",
             })
 
         }catch(error){
@@ -91,7 +91,7 @@ class StudentController {
             const data=await Student.findByIdAndUpdate(id,{isDeleted:true},{new:true})
             return res.status(200).json({
                 success:true,
-                message:"Student soft deleted successfully",
+                message:"product soft deleted successfully",
             })
 
         }catch(error){
